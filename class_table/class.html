@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>小马哥的课表</title>
+	<link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
+	<script src="..\js\jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data=getUrlData("stu_ids");
+			//$("#test").append(data);	
+			var url="sel_stu.php?stu_ids="+data;
+			$.get(url, function(data) {
+				$("#content").append(data);
+			});
+		});
+		function getUrlData(name) {  
+        	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
+        	var r = window.location.search.substr(1).match(reg);  
+        	if (r != null) return unescape(r[2]);  
+        	return null;  
+    	}  
+	</script>
+<style>
+
+body{
+	margin:0;
+	padding:0;
+	background:#f1f1f1;
+	font:70% Arial, Helvetica, sans-serif; 
+	color:#555;
+	line-height:150%;
+	text-align:left;
+}
+a{
+	text-decoration:none;
+	color:#057fac;
+}
+a:hover{
+	text-decoration:none;
+	color:#999;
+}
+h1{
+	font-size:140%;
+	margin:0 20px;
+	line-height:80px;	
+}
+h2{
+	font-size:120%;
+}
+#container{
+	margin:0 auto;
+	width:100%;
+	background:#fff;
+	padding-bottom:20px;
+}
+#content{margin:0 20px;}
+p.sig{	
+	margin:0 auto;
+	width:680px;
+	padding:1em 0;
+}
+form{
+	margin:1em 0;
+	padding:.2em 20px;
+	background:#eee;
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<h1>小马哥的课程表</h1>
+	<div id="test">0.0.0.0.0.0</div>
+	<div id="content">	
+		<h2>学号 ： 201400301185      第15周</h2>
+		<table cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<th>项目</th>
+				<th>星期一</th>
+				<th>星期二</th>
+				<th>星期三</th>
+				<th>星期四</th>
+				<th>星期五</th>
+				<th>星期六</th>
+				<th>星期日</th>							
+			</tr>
+			<tr>
+				<th>第一节</th>
+				<td> </td>
+				<td> </td>
+				<td>计算机网络(双语)<br>软件园1区201d</td>
+				<td> </td>
+				<td>Web技术<br>软件园4区502d</td>
+				<td> </td>
+				<td> </td>						
+			</tr>			
+			<tr>
+				<th>第二节</th>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td>人机交互技术<br>软件园4区402d</td>
+				<td> </td>
+				<td> </td>
+				<td> </td>							
+			</tr>			
+			<tr>
+				<th>第三节</th>
+				<td>计算机网络(双语)<br>软件园1区201d</td>
+				<td>软件体系结构<br>软件园1区402d</td>
+				<td> </td>
+				<td>形势政策与社会实践(5)<br>软件园5区107d</td>
+				<td> </td>
+				<td> </td>
+				<td> </td>							
+			</tr>			
+			<tr>
+				<th>第四节</th>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>							
+			</tr>
+			<tr>
+				<th>第五节</th>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>								
+			</tr>
+			<tr>
+				<th>第六节</th>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>								
+			</tr>
+			<tr>
+				<th>第七节</th>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+				<td> </td>								
+			</tr>																													
+	</tbody></table>			
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+body,button,dd,dl,dt,h1,h2,h3,h4,h5,h6,input,li,ol,p,ul
+{
+	margin:0;
+	padding:0;
+	font-weight:400;
+}
+body
+{
+	color:#3d3d3d;
+	font-size:14px;
+	line-height:30px;
+	font-family:'microsoft yahei',Simsun,Tahoma,Geneva,'Heiti SC';
+}
+html,body
+{
+	background-image:url(about:blank);
+	background-attachment:fixed;
+}
+img
+{
+	border:0;
+}
+li,ul
+{
+	list-style:none;
+}
+li img
+{
+	display:block;
+}
+a
+{
+	color:#333;
+	text-decoration:none;
+	outline:0;
+}
+a:hover
+{
+	color:#f03901;
+	text-decoration:underline;
+}
+input,textarea
+{
+	box-sizing:content-box;
+	outline:0;
+	font-family:inherit;
+	border:0;
+}
+button
+{
+	padding:0;
+	border:0;
+	cursor:pointer;
+	font-family:'microsoft yahei';
+	box-sizing:content-box;
+	outline:0;
+}
+.Content .sortSite li:after, .Content:after, .SameBox:after, .itools:after, .SearchBox:after, .center:after, .clearfix:after 
+{
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: ".";
+}
+.clear
+{
+	clear:both;
+	height:0;
+}

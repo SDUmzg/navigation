@@ -1,0 +1,66 @@
+创建数据库：
+ create database navigation;
+创建用户表：
+create table user(
+  id varchar(25) primary key,
+  name varchar(25) not null,
+  password varchar(25) not null);
+ 第一条测试数据：
+  insert into user values("1666188122@qq.com","Mark","166618");
+  
+创建备忘录表
+create table memo (
+   id int primary key auto_increment,
+   m_time datetime not null,
+   event varchar(300) not null,
+   other varchar(300));
+
+用户---备忘录表
+create table u_memo(
+	u_id varchar(25) not null,
+	m_id int not null
+);
+
+创建随笔表
+create table essay (
+   id int primary key auto_increment,
+   e_time datetime not null,
+   content varchar(300) not null);
+
+用户---随笔表
+create table u_essay(
+	u_id varchar(25) not null,
+	e_id int not null
+);
+
+创建课程表
+create table course(
+   id int primary key auto_increment,
+   course_name varchar(25) not null,
+   course_limit  varchar(50),
+   course_id varchar(10),
+   course_order varchar(5),
+   course_type varchar(10),
+   exam_type varchar(10),
+   course_room varchar(25),
+   class_day varchar(3),
+   class_order varchar(3),
+   start_week varchar(3),
+   end_week varchar(3)
+);
+
+学号-课程表
+create table stu_course(
+   stu_id varchar(15) not null,
+   c_id int not null
+);
+学号表
+create table student(
+  stu_id varchar(15) primary key,
+  state varchar(2)
+)
+用户-学号表
+create table u_student(
+  u_id varchar(25) not null,
+  stu_id varchar(15) not null
+);

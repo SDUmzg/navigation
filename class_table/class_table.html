@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Class Table</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="..\js\jquery.js"></script>
+<script type="text/javascript">
+	/*$(document).ready(function(){
+		if(getCookie("stuid")==""){
+			$(".container").css('display','block');
+		}else{
+			setTimeout(function(){window.location.href='load.php?way=1'},0);
+		}
+	});*/
+	$(document).ready(function(){
+		if(getCookie("Login_Id")==""){
+			if(getCookie("stuid")==""){
+				$(".container").css('display','block');
+				$("#mform").attr('action','load.php?load=0&stu=0'); 
+			}else{
+				//没登录 有本地cookie学号
+				setTimeout(function(){window.location.href='sel_stu.php?load=0&stu=1'},0);
+			}
+		}else{
+			/*if(getCookie("stuid")==""){*/
+				//$("#test").append('data');
+				//这里的功能应该是Ajax判断数据库是否有该账号绑定的学号信息
+				$.post("stu_id_check.php",{u_id:getCookie('Login_Id')},function(data){
+      				//处理程序 
+      				var stu_json=eval("("+data+")");
+      				if(stu_json.list.length==0){
+      					//这里是已经登陆登录而且不存在学号cookie的处理代码
+      					$(".container").css('display','block');
+      					$("#mform").attr('action','load.php?load=1&stu=0'); 
+      				}else{
+      					//这里是已经登陆登录而且绑定了学号的处理代码
+      					//$("#test").append(stu_json.list.length);
+      					$(".container").css('display','block');
+      					$("#autoload").css('display','block');
+      					$("#mform").attr('action','load.php?load=1&stu=0'); 
+      				}
+      			});
+			/*}else{
+				//已经登陆 并且本地存在学号的cookie
+				setTimeout(function(){window.location.href="sel_stu.php?load=1&stu=0"},0);
+			}*/
+		}
+	});
+	function getCookie(c_name)
+			{
+			if (document.cookie.length>0)
+  				{
+ 			 c_start=document.cookie.indexOf(c_name + "=")
+ 		 if (c_start!=-1)
+  	 	 { 
+  		  c_start=c_start + 6
+   		 c_end=document.cookie.indexOf(";",c_start)
+   		 if (c_end==-1) c_end=document.cookie.length
+   		 return unescape(document.cookie.substring(c_start,c_end))
+   		 } 
+  		}
+			return ""
+		}
+</script>
+
+</head>
+<body>
+<div class="container" style="display: none;">
+	<section id="content">
+		<form id="mform" action="" method="post">
+			<h1>模拟登陆教务</h1>
+			<a id="autoload" href="sel_stu.php?load=1&stu=0" style="display: none;">系统检测到已有课表与您关联，点击跳转</a>
+			<div>
+				<input type="text" placeholder="Student_Id" required="" id="username" name="stuid" />
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required="" id="password" name="pwd" />
+			</div>
+			<div>
+				<input type="submit" value="Log in" />
+			</div>
+		</form>
+	</section>
+</div>
+</body>
+</html>
+
+
+

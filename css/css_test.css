@@ -1,0 +1,120 @@
+.SerchBox
+{
+	position: relative;
+    margin: auto;
+    width: 100%;
+    padding-bottom: 10px;
+    height: 123px;
+    z-index: 9991;
+}
+.SearchBox .SerLogo 
+{
+    width: 115px;
+    height: 35px;
+    float: left;
+    margin: 53px 15px 0 72px;
+    float: left;
+    _margin-left: 36px;
+    display: inline;
+}
+.SearchBox .SerMain 
+{
+    width: 605px;
+    float: left;
+}
+.SearchBox .SerType 
+{
+    height: 35px;
+    line-height: 35px;
+    padding: 10px 0 5px;
+}
+.SearchBox .SerIb 
+{
+    width: 605px;
+    height: 40px;
+    position: relative;
+}
+.SearchBox .SerHotkey 
+{
+    height: 24px;
+    line-height: 24px;
+    width: 500px;
+    overflow: hidden;
+    padding-top: 6px;
+}
+.SearchBox .SerType a 
+{
+    margin-right: 22px;
+    text-decoration: none;
+    padding: 2px 3px;
+}
+.SearchBox .SerType a.active {
+    color: #fff;
+    font-weight: 700;
+    background: #6cb5ff;
+    border-radius: 3px;
+    position: relative;
+}
+.SearchBox .SerIb input {
+    width: 450px;
+    height: 20px;
+    line-height: 20px;
+    padding: 9px 33px 9px 15px;
+    border: 1px solid #b7b7b7;
+    float: left;
+    font-size: 16px;
+    background: #fff;
+}
+.SearchBox .SerIb button
+{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    color: #3e3d3d;
+    text-align: center;
+    background: url(../images/mcIcon.png) no-repeat -140px -80px;
+    font-size: 14px;
+    float: right;
+}
+.SearchBox .SerHotbtn 
+{
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    top: 0;
+    right: 108px;
+    cursor: pointer;
+}
+.SearchBox .SerHotbtn span 
+{
+    display: none;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    background: #ff635f;
+    border-radius: 50%;
+    font-size: 12px;
+    position: absolute;
+    top: 11px;
+    left: 6px;
+}
+.SearchBox .SerHotbtn i
+ {
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 6px;
+    background: url(../images/icons.png) no-repeat -120px -60px;
+    top: 13px;
+    right: 10px;
+}
+input, textarea 
+{
+    box-sizing: content-box;
+    outline: 0;
+    font-family: inherit;
+    border: 0;
+}

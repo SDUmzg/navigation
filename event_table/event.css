@@ -1,0 +1,152 @@
+body {
+	background: #DCDDDF url(http://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
+	color: #000;
+	font: 14px Arial;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+#container {
+	position: relative; 
+	width: 100%;
+	height:100%;
+}
+#top{
+	width: 100%;
+	height: 100px;
+	border-bottom: groove 3px;
+}
+#left{
+	width: 50%;
+	min-height: 635px;
+	float: left;
+	border-right: groove 3px;
+	overflow: auto;
+}
+#right{
+	width: 48%;
+	min-height: 635px;
+	float: left;
+	border-left: groove 3px;
+	overflow: auto;
+}
+#t_left{
+	width: 50%;
+	height: 100%;
+	float: left;
+	border-right: groove 3px;
+}
+#t_right{
+	width: 48%;
+	height: 100%;
+	float: left;
+	border-left: groove 3px;
+}
+#top .head_line{
+	margin:0 auto;
+	width:200px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 25px;
+}
+.button{
+	text-decoration:none; 
+	color:#000000;
+	background-image:url(button1.png) ; 
+	display:block; 
+	width:150px; 
+	height:35px;
+	background-position:-5px -4px;
+	text-align:center;
+	padding-top:10px;
+}
+.button:link{
+	text-decoration:none; 
+	color:#000000;
+}
+.button:visited{
+	text-decoration: none;
+}
+.button:hover{
+	text-decoration: none;
+}
+.button:active{
+	background-image:url(button2.png);
+	color: #fff;
+}
+#memo_button{
+	float: right;
+	margin-right: 18px;
+}
+.content{
+	clear: both;
+}
+#essay_button{
+	float: left;
+	margin-left: 20px;
+}
+#index_button{
+	float: right;
+}
+#mytable {   
+width: 700px;   
+padding: 0;   
+margin: 0;   
+}   
+  
+caption {   
+padding: 0 0 5px 0;   
+width: 700px;   
+font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+text-align: right;   
+}   
+  
+th {   
+font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+color: #4f6b72;   
+border-right: 1px solid #C1DAD7;   
+border-bottom: 1px solid #C1DAD7;   
+border-top: 1px solid #C1DAD7;   
+letter-spacing: 2px;   
+text-transform: uppercase;   
+text-align: left;   
+padding: 6px 6px 6px 12px;   
+background: #CAE8EA  no-repeat;   
+}   
+  
+th.nobg {   
+border-top: 0;   
+border-left: 0;   
+border-right: 1px solid #C1DAD7;   
+background: none;   
+}   
+  
+td {   
+border-right: 1px solid #C1DAD7;   
+border-bottom: 1px solid #C1DAD7;   
+background: #fff;   
+font-size:11px;   
+padding: 6px 6px 6px 12px;   
+color: #4f6b72;   
+}   
+  
+  
+td.alt {   
+background: #F5FAFA;   
+color: #797268;   
+}   
+  
+th.spec {   
+border-left: 1px solid #C1DAD7;   
+border-top: 0;   
+background: #fff no-repeat;   
+font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+}   
+  
+th.specalt {   
+border-left: 1px solid #C1DAD7;   
+border-top: 0;   
+background: #f5fafa no-repeat;   
+font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;   
+color: #797268;   
+}   
